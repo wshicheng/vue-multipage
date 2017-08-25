@@ -35,6 +35,11 @@ module.exports = Merge(CommonConfig,{
         screw_ie8: true
       },
       comments: false
+    }),
+    new webpack.HashedModuleIdsPlugin({
+      hashFunction: 'sha256',
+      hashDigest: 'hex',
+      hashDigestLength: 20
     })
   ]
 })
