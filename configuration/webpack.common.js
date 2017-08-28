@@ -13,12 +13,6 @@ module.exports = {
         app: './src/app.js',
     },
     devtool: 'inline-source-map',
-    output: {
-        filename: '[name].bundle.js',
-        path: path.resolve(__dirname, './dist/assets'),
-        publicPath: '',
-        sourceMapFilename: '[name].map'
-    },
     module: {
         rules: [{
                 test: /\.css$/,
@@ -30,6 +24,10 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
+                use: extractSASS.extract(['css-loader', 'sass-loader'])
+            },
+            {
+                test: /\.sass$/,
                 use: extractSASS.extract(['css-loader', 'sass-loader'])
             },
             {

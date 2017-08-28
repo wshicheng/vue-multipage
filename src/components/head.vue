@@ -1,40 +1,57 @@
 <template>
-  <div class="header">
-      <nav>
-          <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-          </ul>
-      </nav>
-  </div>
+    <div class="header">
+        <Menu mode="horizontal" theme="dark" active-name="1">
+            <div class="layout-logo">蜜蜂出行数据运营平台</div>
+            <div class="layout-logoInfo">
+                <i class="iconfont icon-zhanghao1"></i>
+                <span class="accountUserName">管理员</span>
+                <i class="iconfont icon-zhuxiao_logout"></i>
+            </div>
+        </Menu>
+    </div>
 </template>
 <style lang="scss" scoped type="text/css">
-    $nav-color: #f90;
-    $nav-ul-li-fontSize:12px;
-    $nav-ul-li-fontColor:#000;
-    $nav-ul-li-marginRight:10px;
-    $nav-ul-li-border-color:red;
-    $nav-ul-li-border:1px solid $nav-ul-li-border-color;
-    $nav-ul-li-padding:10px 30px;
-    $nav-ul-li-borderRadius:3px;
-    nav{
-        $width:100%;
-        width:$width;
-        color:$nav-color;
-        ul{
-            li{
-                float:left;
-                list-style-type: none;
-                font-size:$nav-ul-li-fontSize;
-                color:$nav-ul-li-fontColor;
-                margin-right: $nav-ul-li-marginRight;
-                border:$nav-ul-li-border;
-                padding:$nav-ul-li-padding;
-                border-radius:$nav-ul-li-borderRadius;
-            }
-        }
-    }
+.layout-logo {
+    height: 30px;
+    border-radius: 3px;
+    float: left;
+    position: relative;
+    top: 15px;
+    left: 20px;
+    color: #fff;
+    font-size:20px;
+    line-height: 30px;
+}
+
+.layout-nav {
+    width: 420px;
+    margin: 0 auto;
+}
+
+.ivu-menu-dark {
+    background: rgb(121, 121, 121);
+}
+
+.layout-logoInfo {
+    float: right;
+    height: 60px;
+}
+
+i.icon-zhanghao1 {
+    color: #fff;
+    font-size: 34px;
+    vertical-align: middle
+}
+
+span.accountUserName {
+    color: #fff;
+    font-size: 16px;
+}
+
+i.icon-zhuxiao_logout {
+    margin-left: 20px;
+    color: #fff;
+    font-size: 16px;
+    margin-right: 20px;
+}
 </style>

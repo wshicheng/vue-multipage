@@ -10,7 +10,12 @@ module.exports = Merge(CommonConfig,{
   //   publicPath: publicPath,
   //   sourceMapFilename: '[name].map'
   // },
-
+    output: {
+      filename: 'javascripts/[name].[hash:8].bundle.js',
+      path: path.resolve(__dirname, './dist/assets'),
+      publicPath: '',
+      sourceMapFilename: '[name].map'
+  },
   plugins: [
     new ZipPlugin({
       path:path.join(__dirname,'dist'),

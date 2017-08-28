@@ -4,12 +4,12 @@ const Merge = require('webpack-merge')
 const CommonConfig = require('./webpack.common')
 module.exports = Merge(CommonConfig,{
     devtool: 'cheap-module-source-map',
-    // output:{
-    //     path:path.join(__dirname,'../dist/assets'),
-    //     filename:'[name].bundle.js',
-    //     publicPath:publicPath,
-    //     sourceMapFilename:'[name].amp'
-    // },
+    output: {
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, './dist/assets'),
+        publicPath: '/',
+        sourceMapFilename: '[name].map'
+    },
     devServer:{
         port:7777,
         host:'localhost',
