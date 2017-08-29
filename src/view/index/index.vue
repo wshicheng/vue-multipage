@@ -96,19 +96,21 @@ export default {
 
 .layout-content {
     min-height: 200px;
-    margin: 15px;
+    padding: 20px;
     overflow: hidden;
-    background: #fff;
-    border-radius: 4px;
+    background: #ececec;
     position: fixed;
-    left: 15px;
-    right: 15px;
-    top: 75px;
-    bottom: 15px;
+    left: 0;
+    right: 0;
+    top: 60px;
+    bottom: 40px;
 }
 
 .layout-content-main {
-    padding: 10px;
+    background: #ffffff;
+    height:100%;
+    border-radius: 4px;
+    margin-left: 20px;
 }
 
 .layout-copy {
@@ -134,7 +136,9 @@ export default {
 .ivu-col-span-5 {
     height: 100%;
     overflow-x: hidden;
-    overflow-y: auto
+    overflow-y: auto;
+    /* background: #495060; */
+    background: #404040;
+    /* border-right: 1px solid #ccc; */
 }
 </style>
-

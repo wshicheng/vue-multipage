@@ -10,9 +10,15 @@
         <Row class="tableGrid">
             <Table :columns="columns" :data="data"></Table>
         </Row>
+        <Row class="paganation">
+            <template>
+                <Page :total="totalListNum" @on-change="handleCurrentPage" @on-page-size-change="handlePageSize" show-sizer :page-size="pageSize" :page-size-opts='pageSizeOpts'></Page>
+            </template>
+        </Row>
     </Row>
 </template>
 <script>
+import $ from 'jquery'
     export default {
         data () {
             return {
@@ -53,16 +59,37 @@
                         updateTime: '2018-01-01 10:01:01',
                         operatingPerson: 'zhouyu'
                     }
-                ]
+                ],
+                totalListNum:100,
+                pageSizeOpts:[10,20,30,40],
+                pageSize:20,
+                currentPage:1,
             }
+        },
+        methods:{
+            handleCurrentPage(currentPage){
+               this.currentPage = currentPage
+            },
+            handlePageSize(pageSize){
+                this.pageSize = pageSize
+            }
+        },
+        mounted(){
+            $(document).ajaxComplete(function(){
+                console.log('111')
+            })
+            
         }
     }
 </script>
 <style lang="scss" type="text/css" scoped>
     $ivu-breadcrumb-margin:20px;
     $tableGridMargin:20px;
+    $tableGridMarginBottom:20px;
     .ivu-breadcrumb{margin-bottom:$ivu-breadcrumb-margin}
     div.tableGrid{
         margin-top:$tableGridMargin;
+        margin-bottom: $tableGridMarginBottom;
     }
+    ul.ivu-page{float:right;}
 </style>

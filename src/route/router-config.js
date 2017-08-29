@@ -1,9 +1,11 @@
 
 import index from '../view/index/index.vue'
 import orderAllData from '../view/order_allData/index.vue'
-import cityManagerAnalysis from '../view/cityManagerAnaliysis/index.vue'
-import cityManagerAnalysisByMonth from '../view/cityManagerAnaliysis/detail.vue'
+import cityManagerAnalysis from '../view/cityManagerAnaliysis/allData/index.vue'
+import cityManagerAnalysisByMonth from '../view/cityManagerAnaliysis/allData/detail.vue'
+import managerData from '../view/cityManagerAnaliysis/manageData/index.vue'
 import Home from '../view/home/index.vue'
+import Login from '../view/login/index.vue'
 export default [
     {
         path: '/',
@@ -18,6 +20,10 @@ export default [
                 component: orderAllData
             },
             {
+                path: '/index/managerData',
+                component: managerData
+            },
+            {
                 path:'/index/cityManagerAnalysis',
                 component: cityManagerAnalysis
             }
@@ -26,6 +32,10 @@ export default [
     {
         path:'/index/cityManagerAnalysis/month/:month',
         component: cityManagerAnalysisByMonth
+    },
+    {
+        path:'/login',
+        component:Login
     }
    
 ]
