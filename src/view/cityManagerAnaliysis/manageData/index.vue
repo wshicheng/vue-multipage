@@ -74,7 +74,7 @@
 
 
             <Table class="cityManage_table" border :columns="columns4" :data="data1"></Table>
-            <Page :total="100" show-sizer show-elevator :styles='page'></Page>
+            <Page :total="100" show-sizer show-elevator :styles='page' placement="top"></Page>
 
             <!-- 模态框区域 -->
             <Modal
